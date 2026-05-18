@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>
+        Shree RAM Mobile Shop, 5g  mobile,
+        </title>
+		        <link href="style1.css" rel="stylesheet" type="text/css">
+
+    <style>
+        .com
+        {
+            color: red;
+        }
+    </style>
+    </head>
+    <body>
+        <table width="90%" align="center" >
+            <tr>
+                <td>
+                      <h1 align="center"><font size="+5"> RAM Mobile Shop</font></h1>
+            <br><br>
+            <p align="center"><img src="logo.png" alt="keyword" title="keyword"></p>
+                </td>
+            </tr>
+            <tr>
+                <td><table  width="90%" align="center">
+                  <tr>
+                    <td><a href="index.html" title="keyword">Home</a></td>
+                    <td><a href="about.html">About us </a></td>
+                    <td><a href="mobiles.html">Mobiles</a></td>
+                    <td><a href="feedback.html">Feedback / Inquiry</a></td>
+                    <td><a href="contact.html">Contact Us</a></td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr>
+                <td>
+                    <h1>Get in Touch / Feedback / Inquiry</h1>
+                <form  name="form1" id="form1" method="post" action="" onSubmit="return f1();">
+                  <table  width="60%" align="Center">
+                <tr>
+                    <td colspan="3" align="center">Send us your Feedback</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><span class="com">* means required fields</span></td>
+                </tr>
+                <tr>
+                    <td> Enter Name <span class="com">*</span></td>
+                    <td> : </td>
+                    <td> <input type="text" name="nm" id="nm" onKeyUp="return f2();" placeholder="Enter Name" autofocus></td>
+                </tr>
+
+                <tr>
+                    <td> Enter Mobile No. <span class="com">*</span></td>
+                    <td> : </td>
+                    <td> <input type="text" maxlength="10" name="mob" id="mob" placeholder="Enter Mobile Number"  pattern="[6-9]{1}[0-9]{9}"></td>
+                </tr>
+
+                <tr>
+                    <td> Enter Email ID. <span class="com">*</span></td>
+                    <td> : </td>
+                    <td> <input type="email" name="em" id="em" placeholder="Enter Email ID"  ></td>
+                </tr>
+
+                <tr>
+                    <td> Enter Subject</td>
+                    <td> : </td>
+                    <td> <input type="text" name="sub" id="sub" placeholder="Enter Subject"  ></td>
+                </tr>
+
+                 <tr>
+                    <td> Enter Message <span class="com">*</span>   </td>
+                    <td> : </td>
+                    <td><textarea name="msg" id="msg" placeholder="Type your Message" cols="40" rows="5"></textarea></td>
+                </tr>
+                <tr><td colspan="3" align="center"><input type="submit" value="Send" onClick="return f1();"></td></tr>
+                </table>  
+                </form>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">All rights are reserved for RAM Mobile Shop &trade;. </td>
+            </tr>
+        </table>
+        </body>
+</html>
+<script>
+    function f1()
+    {
+        if(form1.nm.value=="")
+        {
+            alert("Enter your Name ");
+            form1.nm.focus();
+            return false;
+        }
+        else if(form1.mob.value=="")
+        {
+            alert("Enter your Mobile Number ");
+            form1.mob.focus();
+            return false;
+        }
+        else if(form1.mob.value.length!=10)
+        {
+            alert("Mobile Number require 10 Digits ");
+            form1.mob.focus();
+            return false;
+        }
+        else if(isNaN(form1.mob.value))
+        {
+            alert("Characters or Symbols are not allow on Mobile Number ");
+            form1.mob.focus();
+            return false;
+        }
+        else if(form1.em.value=="")
+        {
+            alert("Enter your Email ID ");
+            form1.em.focus();
+            return false;
+        }
+        else if(form1.msg.value=="")
+        {
+            alert("Type your message ");
+            form1.msg.focus();
+            return false;
+        }
+    }
+function f2()
+{
+    form1.nm.value=form1.nm.value.toUpperCase();
+}
+</script>
